@@ -1,0 +1,597 @@
+/* Общие стили */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #00b894;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #00ffcc;
+}
+
+/* Шапка */
+header {
+  background: rgba(26, 26, 46, 0.8);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00ffcc;
+  transform: translateY(-3px);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 150px 50px;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(22, 33, 62, 0.8));
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: #ccc;
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #00b894, #00ffcc);
+  color: #fff;
+  box-shadow: 0 0 15px #00b894, 0 0 30px #00b894;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+  box-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #00ffcc, 0 0 50px #00ffcc;
+}
+
+.hero-animation {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.circle {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(0, 255, 204, 0.1);
+  border-radius: 50%;
+  animation: pulse 4s infinite;
+}
+
+.circle:nth-child(2) {
+  top: 50px;
+  left: 50px;
+  animation-delay: 1s;
+}
+
+.circle:nth-child(3) {
+  top: 100px;
+  left: 100px;
+  animation-delay: 2s;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Features Section */
+.features {
+  padding: 80px 50px;
+  text-align: center;
+  background: rgba(22, 33, 62, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  margin-bottom: 40px;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.card {
+  background: rgba(26, 26, 46, 0.8);
+  padding: 30px;
+  border-radius: 20px;
+  width: 30%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #00ffcc;
+}
+
+.card p {
+  color: #ccc;
+}
+
+/* Pricing Section */
+.pricing {
+  padding: 80px 50px;
+  text-align: center;
+  background: rgba(15, 15, 35, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.pricing h2 {
+  font-size: 2.5rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  margin-bottom: 40px;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.pricing .card {
+  background: rgba(26, 26, 46, 0.8);
+  padding: 30px;
+  border-radius: 20px;
+  width: 30%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.pricing .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+}
+
+.pricing .card.popular {
+  border: 2px solid #00ffcc;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+}
+
+.price {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.price span {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 80px 50px;
+  text-align: center;
+  background: rgba(22, 33, 62, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  margin-bottom: 40px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.testimonials .card {
+  background: rgba(26, 26, 46, 0.8);
+  padding: 30px;
+  border-radius: 20px;
+  width: 30%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.testimonials .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+}
+
+.testimonials .card p {
+  font-style: italic;
+  color: #ccc;
+}
+
+.testimonials .card span {
+  display: block;
+  margin-top: 10px;
+  color: #00ffcc;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background: rgba(26, 26, 46, 0.8);
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #00ffcc;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #00b894;
+  transform: translateY(-3px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 20px;
+  }
+
+  .hero-animation {
+    margin-top: 20px;
+  }
+
+  .feature-cards, .pricing-cards, .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.modal-content {
+  background: #1a1a2e;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #00ffcc;
+}
+
+/* Карта */
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Поиск */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#searchInput {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #00ffcc;
+  background: transparent;
+  color: #fff;
+}
+
+#searchButton {
+  background: #00ffcc;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Темная/светлая тема */
+body.light-theme {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.light-theme .card, .light-theme .modal-content {
+  background: #fff;
+  color: #333;
+}
+
+.light-theme .btn-primary {
+  background: #00b894;
+  color: #fff;
+}
+
+.light-theme .btn-secondary {
+  border: 2px solid #00b894;
+  color: #00b894;
+}
+
+/* Гамбургер-меню */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #00ffcc;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #1a1a2e;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+/* Аккордеон */
+.accordion-item {
+  border-bottom: 1px solid #00ffcc;
+}
+
+.accordion-header {
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  background: rgba(0, 255, 204, 0.1);
+  transition: background 0.3s ease;
+}
+
+.accordion-header:hover {
+  background: rgba(0, 255, 204, 0.2);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content p {
+  padding: 15px;
+}
+
+/* Уведомления */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00ffcc;
+  color: #1a1a2e;
+  padding: 15px;
+  border-radius: 5px;
+  display: none;
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+} 
+
+/* Прогресс-бар */
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background: #1a1a2e;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: #00ffcc;
+  transition: width 0.5s ease;
+}
+
+/* Чат с поддержкой */
+.chat-container {
+  background: #1a1a2e;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.chat-messages {
+  height: 300px;
+  overflow-y: auto;
+  border-bottom: 1px solid #00ffcc;
+  margin-bottom: 10px;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #00ffcc;
+  background: transparent;
+  color: #fff;
+}
+
+.chat-input button {
+  background: #00ffcc;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Календарь */
+.calendar {
+  background: #1a1a2e;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Графики */
+.chart-container {
+  background: #1a1a2e;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+}
